@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<meta charset="UTF-8" />
+
+</head>
+<body>
+    <input type="number" id="numero"/>
+    <input type="hidden" id="numeroAnterior">
+    <br/>
+    <button onclick="mudarValor(1)">1</button>
+    <button onclick="mudarValor(2)">2</button>
+    <button onclick="mudarValor(3)">3</button>
+    <br/>
+    <button onclick="mudarValor(4)">4</button>
+    <button onclick="mudarValor(5)">5</button>
+    <button onclick="mudarValor(6)">6</button>
+    <br/>
+    <button onclick="mudarValor(7)">7</button>
+    <button onclick="mudarValor(8)">8</button>
+    <button onclick="mudarValor(9)">9</button>
+    <br/>
+    <button onclick="mudarValor(0)">0</button>
+    <br	/>
+    <button onclick="limpar()">Limpar</button>
+    <br/>
+    <button onclick="somar()">Somar</button>
+    <br/>
+    <button onclick="calcularResultado()">Calcular resultado</button>
+</body>
+	<script type="text/javascript">
+	   campo = document.getElementById("numero");
+       campo.value=0;
+
+       function mudarValor(numeroDoBotao){
+       	  // pegar o valor atual no campo
+       	  numeroNoCampo = campo.value;
+       	  //concatenar os numeros do campo e do botão 
+       	  novoNumero=numeroNoCampo+numeroDoBotao;
+
+       	  //converter o numero para inteiro
+       	  numeroEmInteiro = parseInt(novoNumero);
+       	  // substitui o valor do campo pelo valor da variavel numeroEmInteiro
+       	  campo.value=numeroEmInteiro;
+       }
+
+       function limpar(){
+           campo.value="";
+       }
+
+       function somar(){
+            numeroNoCampo = campo.value;
+            limpar();
+            //selecionar o campo do numero anterior
+            campoAnterior = document.getElementById("numeroAnterior");
+            campoAnterior.value = numeroNoCampo;
+
+       }
+
+       function calcularResultado(){
+       	   // obter o valor do numero anterior
+       	   numeroAnterior=document.getElementById("numeroAnterior").value;
+       	   //pegar o valor do segundo numero
+       	   numeroNoCampo = campo.value;
+       	   novoNumero=parseInt(numeroAnterior)+parseInt(numeroNoCampo);
+       	   campo.value=novoNumero;
+       }
+
+
+	</script>
+</html>

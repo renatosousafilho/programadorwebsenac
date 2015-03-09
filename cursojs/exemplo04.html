@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página que muda de cor</title>
+	<script type="text/javascript">
+        document.write("Olá mundo");
+        var tagBody = document.body;
+        function mudarParaVermelho(){
+        	tagBody.style="background-color:#ff0000";
+        }
+
+        function mudarParaVerde(){
+        	tagBody.style="background-color: #00FF00";
+        }
+	</script>
+</head>
+<body style="background-color:#ccc">
+   <h1>Escolha uma cor:</h1>
+   <br/>
+   <button onclick="mudarParaVermelho()">Vermelho</button>
+   <button>Amarelo</button>
+   <button>Preto</button>
+   <button>Branco</button>
+   <button onclick="mudarParaVerde()">Verde</button>
+</body>
+</html>

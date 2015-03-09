@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo com ajax</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="ajax.js"></script>
+	<script type="text/javascript">
+	function acessar(){
+		ajax.open("GET","http://localhost");
+		ajax.send();
+		ajax.onreadystatechange=function(){
+			window.alert(ajax.responseText);
+		}
+	}
+	</script>
+</head>
+<body>
+     <h1>Página com Ajax</h1>
+     <button onclick="acessar()">Acessar</button>
+</body>
+</html>

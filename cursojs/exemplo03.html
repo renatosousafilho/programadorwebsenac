@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcular soma com JS</title>
+	<script type="text/javascript">
+		function calculaResultado(){
+			campoNum1 = document.getElementById("num1");
+			campoNum2 = document.getElementById("num2");
+			numero1 = parseInt(campoNum1.value);
+			numero2 = parseInt(campoNum2.value);
+			soma = numero1+numero2;
+			// selecionando o elemento onde o id é igual a 'resultado'
+			tagResultado = document.getElementById("resultado");
+			// substituindo o conteudo interno do elemento
+			tagResultado.innerHTML= "Resultado:"+soma;	
+		}
+	</script>
+</head>
+<body>
+   Número 1:<input type="number" id="num1" />
+   <br/>
+   Número 2:<input type="number" id="num2">
+   <br/>
+   <button onclick="calculaResultado()">Calcular soma</button>
+   <p id="resultado"></p>
+</body>
+</html>

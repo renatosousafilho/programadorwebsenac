@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript">
+			function carregarPagina(){
+				//window.alert("pagina carregada");
+			}
+
+			function somar(numero1, numero2){
+				soma = numero1+numero2;
+				return soma;
+			}
+
+			function calcularSoma(){
+				campoNum1 = document.getElementById("numero1");
+				numero1=parseInt(campoNum1.value);
+				campoNum2=document.getElementById("numero2");
+				numero2=parseInt(campoNum2.value);
+				resultado=somar(numero1,numero2);
+				window.alert(resultado);
+			}
+
+			function confirmarLimpeza(){
+				opcao = window.confirm("Deseja realmente limpar o formulário?");
+				/* if (opcao==true){
+				 	window.alert("Ok");	
+				 } else {
+				 	window.alert("Cancelar");
+				} */
+				return opcao;
+			}
+		</script>
+	</head>
+	<body onload="carregarPagina()">
+	   <form onsubmit="calcularSoma()" onreset="return confirmarLimpeza()">
+	   	  Nũmero 1: <input type="number" id="numero1">
+	   	  Número 2: <input type="number" id="numero2">
+	   	  <input type="submit" value="Calcular soma">
+	   	  <input type="reset" value="Limpar campos">
+
+	   </form>
+	</body>
+</html>
+

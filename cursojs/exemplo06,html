@@ -1,0 +1,40 @@
+<script type="text/javascript">
+   //PHP: echo "Olá Mundo"
+   document.write("Ola Mundo");
+
+   // variaveis no Javascript
+   var nome = "Francisco";
+   numeroInteiro = 10;
+   numeroReal = 10.5;
+
+   //operacoes aritmeticas basicas
+   soma = 10+10;
+   subtracao = 10-10;
+   multiplicacao = 10*10;
+   divisao = 10/10;
+   resto = 10%2;
+   
+   //concatenar strings
+   nomeCompleto = "João"+"  Francisco";
+
+   // exibir o valor de uma variável
+   document.write("<br/>");
+   document.write(nomeCompleto);
+
+   //concatenadno string com inteiro
+   variavel = "Numero" + 10;
+   document.write("<br/>");
+   document.write(variavel);
+   numeroEmString = "10";
+   document.write("<br/>");
+   document.write(numeroEmString+10)
+   //converter uma string para inteiro
+   numero = parseInt(numeroEmString);
+   document.write("<br/>");
+   document.write(numero+10);
+   //usando parseInt com String retorna NaN
+   numero2 = parseInt("um");
+   document.write("<br/>");
+   document.write(numero2);
+</script>
+
